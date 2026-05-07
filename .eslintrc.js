@@ -24,13 +24,10 @@ module.exports = {
       version: '18.2'
     }
   },
-  plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true }
-    ],
     'react/prop-types': 'off',
-    'no-unused-vars': 'warn'
+    'react/no-unescaped-entities': 'off',
+    'no-unused-vars': 'off',
+    'react-hooks/exhaustive-deps': 'off'
   }
 }

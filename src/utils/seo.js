@@ -67,4 +67,3 @@ export const generateSchemaMarkup = (type, data) => {
   
   return schemas[type] || baseSchema
 }
-Store Files (Converting to JSX instead of TS)
