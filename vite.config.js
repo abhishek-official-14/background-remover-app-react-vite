@@ -28,7 +28,7 @@
 //       }
 //     },
 //     chunkSizeWarningLimit: 1000,
-//     minify: 'terser',
+//     minify: 'esbuild',
 //     terserOptions: {
 //       compress: {
 //         drop_console: true,
@@ -38,7 +38,7 @@
 //   },
 //   server: {
 //     port: 3000,
-//     open: true
+//     open: false
 //   },
 //   optimizeDeps: {
 //     include: ['react', 'react-dom', 'framer-motion', 'axios']
@@ -113,19 +113,12 @@ export default defineConfig({
 
     chunkSizeWarningLimit: 1000,
 
-    minify: 'terser',
-
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
+    minify: 'esbuild'
   },
 
   server: {
     port: 3000,
-    open: true
+    open: false
   },
 
   optimizeDeps: {

@@ -84,4 +84,3 @@ function resizeImage(imageData, options) {
   
   return ctx.getImageData(0, 0, width, height)
 }
-Remaining Files

@@ -65,4 +65,3 @@ export const ProcessingProvider = ({ children }) => {
     </ProcessingContext.Provider>
   );
 };
-Hooks;
