@@ -1,0 +1,16 @@
+.card {
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  
+  &.hoverable {
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-color);
+    }
+  }
+}

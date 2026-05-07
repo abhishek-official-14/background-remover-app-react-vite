@@ -1,0 +1,53 @@
+.privacy {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.date {
+  color: var(--text-tertiary);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  section {
+    margin-bottom: 2rem;
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+    
+    p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+      
+      li {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 1.5rem;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  
+  a {
+    color: var(--text-secondary);
+    transition: color 0.2s;
+    font-size: 1.25rem;
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  
+  p {
+    color: var(--text-tertiary);
+    font-size: 0.875rem;
+  }
+}
+
+.legal {
+  display: flex;
+  gap: 1.5rem;
+  
+  a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

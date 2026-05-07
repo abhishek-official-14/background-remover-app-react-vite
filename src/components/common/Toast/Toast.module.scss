@@ -1,0 +1,135 @@
+.toast {
+  position: relative;
+  min-width: 300px;
+  max-width: 400px;
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-left: 4px solid;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.message {
+  flex: 1;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: currentColor;
+  animation: progress linear forwards;
+}
+
+.success {
+  border-left-color: var(--success-color);
+  
+  .icon {
+    color: var(--success-color);
+  }
+  
+  .progressBar {
+    background: var(--success-color);
+  }
+}
+
+.error {
+  border-left-color: var(--error-color);
+  
+  .icon {
+    color: var(--error-color);
+  }
+  
+  .progressBar {
+    background: var(--error-color);
+  }
+}
+
+.info {
+  border-left-color: var(--info-color);
+  
+  .icon {
+    color: var(--info-color);
+  }
+  
+  .progressBar {
+    background: var(--info-color);
+  }
+}
+
+.warning {
+  border-left-color: var(--warning-color);
+  
+  .icon {
+    color: var(--warning-color);
+  }
+  
+  .progressBar {
+    background: var(--warning-color);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  
+  @media (max-width: 768px) {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    
+    .toast {
+      min-width: auto;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

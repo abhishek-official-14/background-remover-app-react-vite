@@ -1,0 +1,63 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin grid-responsive($min-width: 250px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: 1.5rem;
+}
+
+@mixin hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+@mixin gradient-bg {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+@mixin gradient-text {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 640px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: 1280px) { @content; }
+  }
+}
+
+@mixin focus-ring {
+  outline: none;
+  ring: 2px solid var(--primary-color);
+  ring-offset: 2px;
+}

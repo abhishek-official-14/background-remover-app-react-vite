@@ -1,0 +1,87 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./src/*"],
+//       "@components/*": ["./src/components/*"],
+//       "@pages/*": ["./src/pages/*"],
+//       "@hooks/*": ["./src/hooks/*"],
+//       "@utils/*": ["./src/utils/*"],
+//       "@services/*": ["./src/services/*"],
+//       "@styles/*": ["./src/styles/*"],
+//       "@contexts/*": ["./src/contexts/*"],
+//       "@assets/*": ["./src/assets/*"]
+//     },
+//     "jsx": "react-jsx"
+//   },
+//   "exclude": ["node_modules", "dist"]
+// }
+
+
+
+
+
+
+
+
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+
+    "paths": {
+      "@/*": ["./src/*"],
+
+      "@components/*": [
+        "./src/components/*"
+      ],
+
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+
+      "@services/*": [
+        "./src/services/*"
+      ],
+
+      "@styles/*": [
+        "./src/styles/*"
+      ],
+
+      "@contexts/*": [
+        "./src/contexts/*"
+      ],
+
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+
+      "@store/*": [
+        "./src/store/*"
+      ],
+
+      "@workers/*": [
+        "./src/workers/*"
+      ]
+    },
+
+    "jsx": "react-jsx"
+  },
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

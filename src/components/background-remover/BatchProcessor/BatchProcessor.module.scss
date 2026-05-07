@@ -1,0 +1,90 @@
+.batchProcessor {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fileList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  
+  &:hover {
+    background: var(--bg-tertiary);
+  }
+}
+
+.fileInfo {
+  flex: 1;
+}
+
+.fileName {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.fileSize {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border-color);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s;
+  
+  &:hover {
+    color: var(--error-color);
+    background: rgba(239, 68, 68, 0.1);
+  }
+}
+
+.empty {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-tertiary);
+}

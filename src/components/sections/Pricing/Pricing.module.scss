@@ -1,0 +1,138 @@
+.pricing {
+  padding: 5rem 0;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.option {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  &.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.plan {
+  background: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  position: relative;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  &.popular {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    
+    &:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+  }
+}
+
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.planName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.price {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+}
+
+.credits {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+  }
+}
+
+.check {
+  color: var(--success-color);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .popular {
+    transform: scale(1);
+    
+    &:hover {
+      transform: scale(1);
+    }
+  }
+}
