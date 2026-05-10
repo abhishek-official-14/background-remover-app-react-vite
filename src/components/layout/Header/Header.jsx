@@ -7,10 +7,10 @@ import {
   FiMenu,
   FiX,
   FiUser,
-  FiLogOut,
-  FiSettings,
+  FiLogOut
 } from "react-icons/fi";
 import { useTheme } from "@contexts/ThemeContext";
+import { primaryNavItems } from "@/config/navigation";
 import { useUser } from "@contexts/UserContext";
 import styles from "./Header.module.scss";
 
@@ -29,12 +29,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { label: "Home", path: "/" },
-    { label: "Dashboard", path: "/dashboard" },
-    { label: "Pricing", path: "/pricing" },
-    { label: "Blog", path: "/blog" },
-  ];
 
   return (
     <motion.header
@@ -50,7 +44,7 @@ const Header = () => {
         </Link>
 
         <nav className={`${styles.nav} ${mobileMenuOpen ? styles.open : ""}`}>
-          {navItems.map((item, index) => (
+          {primaryNavItems.map((item, index) => (
             <motion.div
               key={item.path}
               initial={{ opacity: 0, y: -20 }}
@@ -79,20 +73,14 @@ const Header = () => {
                   <span>{user.name}</span>
                 </button>
                 <div className={styles.dropdown}>
-                  <button onClick={() => navigate("/dashboard/settings")}>
-                    <FiSettings /> Settings
-                  </button>
                   <button onClick={logout}>
                     <FiLogOut /> Logout
                   </button>
                 </div>
               </div>
             ) : (
-              <button
-                className={styles.loginBtn}
-                onClick={() => navigate("/login")}
-              >
-                Sign In
+              <button className={styles.loginBtn} onClick={() => navigate("/dashboard")}>
+                Open Dashboard
               </button>
             )}
           </div>

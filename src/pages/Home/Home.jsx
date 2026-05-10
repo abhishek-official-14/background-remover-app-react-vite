@@ -12,15 +12,13 @@ import FAQ from "@components/sections/FAQ";
 import Comparison from "@components/sections/Comparison";
 import { useImageProcessor } from "@hooks/useImageProcessor";
 import { useToast } from "@contexts/ToastContext";
-import { useUser } from "@contexts/UserContext";
 import styles from "./Home.module.scss";
 
 const Home = () => {
   const [originalImage, setOriginalImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
-  const { processImage, processing, progress } = useImageProcessor();
+  const { processImage } = useImageProcessor();
   const toast = useToast();
-  const { useCredits } = useUser();
 
   const handleImageUpload = async (file) => {
     if (!file) return;

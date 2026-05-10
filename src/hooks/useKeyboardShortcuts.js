@@ -32,7 +32,7 @@ export const useKeyboardShortcuts = () => {
       toast.success('Saved')
     },
     'ctrl+h': () => {
-      navigate('/dashboard/history')
+      navigate('/dashboard')
     },
     'escape': () => {
       document.querySelector('[data-close-modal]')?.click()

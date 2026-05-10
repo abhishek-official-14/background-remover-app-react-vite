@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiTwitter, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import styles from "./Footer.module.scss";
+import { primaryNavItems, footerLegalLinks } from "@/config/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,17 +36,18 @@ const Footer = () => {
           <div className={styles.section}>
             <h4 className={styles.subtitle}>Navigate</h4>
             <ul className={styles.links}>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/dashboard">Dashboard</Link></li>
-              <li><Link to="/pricing">Pricing</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
+              {primaryNavItems.map((item) => (
+                <li key={item.path}><Link to={item.path}>{item.label}</Link></li>
+              ))}
             </ul>
           </div>
 
           <div className={styles.section}>
             <h4 className={styles.subtitle}>Legal</h4>
             <ul className={styles.links}>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
+              {footerLegalLinks.map((item) => (
+                <li key={item.path}><Link to={item.path}>{item.label}</Link></li>
+              ))}
             </ul>
           </div>
         </div>
@@ -53,7 +55,9 @@ const Footer = () => {
         <div className={styles.bottom}>
           <p>&copy; {currentYear} AI Background Remover. All rights reserved.</p>
           <div className={styles.legal}>
-            <Link to="/privacy">Privacy Policy</Link>
+            {footerLegalLinks.map((item) => (
+              <Link key={item.path} to={item.path}>{item.label}</Link>
+            ))}
           </div>
         </div>
       </div>

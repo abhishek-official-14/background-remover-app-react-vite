@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { appRoutes } from "@/config/navigation";
 import { AnimatePresence } from "framer-motion";
 import Layout from "@components/layout/Layout";
 import { useKeyboardShortcuts } from "@hooks/useKeyboardShortcuts";
@@ -25,11 +26,17 @@ function App() {
       <Layout>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/privacy" element={<Privacy />} />
+            {appRoutes.map((route) => {
+              const pageMap = {
+                home: <Home />,
+                dashboard: <Dashboard />,
+                pricing: <Pricing />,
+                blog: <Blog />,
+                privacy: <Privacy />,
+              };
+
+              return <Route key={route.path} path={route.path} element={pageMap[route.elementKey]} />;
+            })}
           </Routes>
         </Suspense>
       </Layout>
