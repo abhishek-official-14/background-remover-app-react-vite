@@ -5,10 +5,7 @@ import ImageUploader from "@components/background-remover/ImageUploader";
 import BeforeAfterSlider from "@components/background-remover/BeforeAfterSlider";
 import Controls from "@components/background-remover/Controls";
 import BackgroundEditor from "@components/background-remover/BackgroundEditor";
-import Features from "@components/sections/Features";
-import Pricing from "@components/sections/Pricing";
 import Testimonials from "@components/sections/Testimonials";
-import FAQ from "@components/sections/FAQ";
 import Comparison from "@components/sections/Comparison";
 import { useImageProcessor } from "@hooks/useImageProcessor";
 import { useToast } from "@contexts/ToastContext";
@@ -123,11 +120,8 @@ const Home = () => {
           </div>
         </section>
 
-        <Features />
         <Comparison />
         <Testimonials />
-        <Pricing />
-        <FAQ />
       </div>
     </>
   );
