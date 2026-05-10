@@ -3,33 +3,6 @@ import { Link } from "react-router-dom";
 import { FiTwitter, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import styles from "./Footer.module.scss";
 
-const socialLinks = [
-  {
-    href: "https://twitter.com",
-    label: "Twitter",
-    icon: FiTwitter,
-    external: true,
-  },
-  {
-    href: "https://github.com",
-    label: "GitHub",
-    icon: FiGithub,
-    external: true,
-  },
-  {
-    href: "https://linkedin.com",
-    label: "LinkedIn",
-    icon: FiLinkedin,
-    external: true,
-  },
-  {
-    href: "mailto:contact@backgroundremover.ai",
-    label: "Email",
-    icon: FiMail,
-    external: false,
-  },
-];
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -43,46 +16,36 @@ const Footer = () => {
               Professional AI-powered background removal with precise edge
               detection. Remove backgrounds instantly from any image.
             </p>
-
             <div className={styles.social}>
-              {socialLinks.map(({ href, label, icon: Icon, external }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                >
-                  <Icon />
-                </a>
-              ))}
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <FiTwitter />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FiGithub />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FiLinkedin />
+              </a>
+              <a href="mailto:contact@backgroundremover.ai" aria-label="Email">
+                <FiMail />
+              </a>
             </div>
           </div>
 
           <div className={styles.section}>
             <h4 className={styles.subtitle}>Navigate</h4>
             <ul className={styles.links}>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
-              <li>
-                <Link to="/pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
             </ul>
           </div>
 
           <div className={styles.section}>
             <h4 className={styles.subtitle}>Legal</h4>
             <ul className={styles.links}>
-              <li>
-                <Link to="/privacy">Privacy Policy</Link>
-              </li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
