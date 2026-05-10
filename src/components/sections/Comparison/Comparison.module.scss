@@ -16,14 +16,14 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   background: var(--primary-color);
-  color: white;
+  color: var(--text-on-brand);
   font-weight: 600;
   
   > div {
     padding: 1rem 1.5rem;
     
     &:not(:last-child) {
-      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      border-right: 1px solid rgb(255 255 255 / 0.3);
     }
   }
 }

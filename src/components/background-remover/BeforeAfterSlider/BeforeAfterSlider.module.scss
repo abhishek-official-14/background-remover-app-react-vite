@@ -29,11 +29,11 @@
 }
 
 .label {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--bg-overlay);
   backdrop-filter: blur(4px);
   padding: 0.25rem 0.75rem;
   border-radius: var(--border-radius-md);
-  color: white;
+  color: var(--text-on-brand);
   font-size: 0.875rem;
   font-weight: 600;
 }

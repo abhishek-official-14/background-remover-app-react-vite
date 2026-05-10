@@ -18,12 +18,12 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-family-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base) ease, color var(--transition-base) ease, border-color var(--transition-base) ease, box-shadow var(--transition-base) ease;
 }
 
 code {
@@ -59,10 +59,10 @@ a {
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-glass);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--bg-glass-border);
 }
 
 .section {
@@ -90,7 +90,7 @@ a {
 
 .section-subtitle {
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 3rem;
   font-size: 1.1rem;
 }

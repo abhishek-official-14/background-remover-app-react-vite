@@ -24,10 +24,10 @@
 // Variants
 .primary {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--text-on-brand);
   
   &:hover:not(:disabled) {
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 20px var(--focus-ring);
     transform: translateY(-2px);
   }
 }
@@ -50,16 +50,16 @@
   
   &:hover:not(:disabled) {
     background: var(--primary-color);
-    color: white;
+    color: var(--text-on-brand);
   }
 }
 
 .danger {
   background: var(--error-color);
-  color: white;
+  color: var(--text-on-brand);
   
   &:hover:not(:disabled) {
-    background: #dc2626;
+    background: var(--error-color-hover);
     transform: translateY(-2px);
   }
 }
@@ -90,9 +90,9 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgb(255 255 255 / 0.4);
   border-radius: 50%;
-  border-top-color: white;
+  border-top-color: var(--text-on-brand);
   animation: spin 0.8s linear infinite;
 }
 
