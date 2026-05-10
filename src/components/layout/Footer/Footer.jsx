@@ -17,96 +17,43 @@ const Footer = () => {
               detection. Remove backgrounds instantly from any image.
             </p>
             <div className={styles.social}>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FiTwitter />
               </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FiGithub />
               </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FiLinkedin />
               </a>
-              <a href="mailto:contact@backgroundremover.ai">
+              <a href="mailto:contact@backgroundremover.ai" aria-label="Email">
                 <FiMail />
               </a>
             </div>
           </div>
 
           <div className={styles.section}>
-            <h4 className={styles.subtitle}>Product</h4>
+            <h4 className={styles.subtitle}>Navigate</h4>
             <ul className={styles.links}>
-              <li>
-                <Link to="/features">Features</Link>
-              </li>
-              <li>
-                <Link to="/pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/api">API</Link>
-              </li>
-              <li>
-                <Link to="/changelog">Changelog</Link>
-              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/dashboard">Dashboard</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
             </ul>
           </div>
 
           <div className={styles.section}>
-            <h4 className={styles.subtitle}>Resources</h4>
+            <h4 className={styles.subtitle}>Legal</h4>
             <ul className={styles.links}>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link to="/docs">Documentation</Link>
-              </li>
-              <li>
-                <Link to="/help">Help Center</Link>
-              </li>
-              <li>
-                <Link to="/tutorials">Tutorials</Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.section}>
-            <h4 className={styles.subtitle}>Company</h4>
-            <ul className={styles.links}>
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
-              <li>
-                <Link to="/careers">Careers</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
-                <Link to="/privacy">Privacy Policy</Link>
-              </li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
 
         <div className={styles.bottom}>
-          <p>
-            &copy; {currentYear} AI Background Remover. All rights reserved.
-          </p>
+          <p>&copy; {currentYear} AI Background Remover. All rights reserved.</p>
           <div className={styles.legal}>
-            <Link to="/terms">Terms of Service</Link>
             <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/cookies">Cookie Policy</Link>
           </div>
         </div>
       </div>
