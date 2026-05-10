@@ -11,6 +11,7 @@ const Dashboard = lazy(() => import("@pages/Dashboard"));
 const Pricing = lazy(() => import("@pages/Pricing"));
 const Blog = lazy(() => import("@pages/Blog"));
 const Privacy = lazy(() => import("@pages/Privacy"));
+const Comparison = lazy(() => import("@pages/Comparison"));
 
 function App() {
   useKeyboardShortcuts();
@@ -30,6 +31,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/comparison" element={<Comparison />} />
           </Routes>
         </Suspense>
       </Layout>

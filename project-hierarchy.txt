@@ -1,0 +1,176 @@
+background-remover-app-react-vite
+├─ .env.example
+├─ .eslintrc.js
+├─ .gitignore
+├─ .prettierrc
+├─ index.html
+├─ jsconfig.json
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.ico
+│  └─ site.webmanifest
+├─ README.md
+├─ src
+│  ├─ App.jsx
+│  ├─ App.module.scss
+│  ├─ components
+│  │  ├─ analytics
+│  │  │  ├─ AnalyticsDashboard
+│  │  │  │  ├─ AnalyticsDashboard.jsx
+│  │  │  │  ├─ AnalyticsDashboard.module.scss
+│  │  │  │  └─ index.js
+│  │  │  └─ HistoryPanel
+│  │  │     ├─ HistoryPanel.jsx
+│  │  │     ├─ HistoryPanel.module.scss
+│  │  │     └─ index.js
+│  │  ├─ background-remover
+│  │  │  ├─ BackgroundEditor
+│  │  │  │  ├─ BackgroundEditor.jsx
+│  │  │  │  ├─ BackgroundEditor.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ BatchProcessor
+│  │  │  │  ├─ BatchProcessor.jsx
+│  │  │  │  ├─ BatchProcessor.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ BeforeAfterSlider
+│  │  │  │  ├─ BeforeAfterSlider.jsx
+│  │  │  │  ├─ BeforeAfterSlider.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ Controls
+│  │  │  │  ├─ Controls.jsx
+│  │  │  │  ├─ Controls.module.scss
+│  │  │  │  └─ index.js
+│  │  │  └─ ImageUploader
+│  │  │     ├─ ImageUploader.jsx
+│  │  │     ├─ ImageUploader.module.scss
+│  │  │     └─ index.js
+│  │  ├─ common
+│  │  │  ├─ Button
+│  │  │  │  ├─ Button.jsx
+│  │  │  │  ├─ Button.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ Card
+│  │  │  │  ├─ Card.jsx
+│  │  │  │  ├─ Card.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ Input
+│  │  │  │  ├─ index.js
+│  │  │  │  ├─ Input.jsx
+│  │  │  │  └─ Input.module.scss
+│  │  │  ├─ Loader
+│  │  │  │  ├─ index.js
+│  │  │  │  ├─ Loader.jsx
+│  │  │  │  └─ Loader.module.scss
+│  │  │  ├─ Modal
+│  │  │  │  ├─ index.js
+│  │  │  │  ├─ Modal.jsx
+│  │  │  │  └─ Modal.module.scss
+│  │  │  ├─ Select
+│  │  │  │  ├─ index.js
+│  │  │  │  ├─ Select.jsx
+│  │  │  │  └─ Select.module.scss
+│  │  │  ├─ Skeleton
+│  │  │  │  ├─ index.js
+│  │  │  │  ├─ Skeleton.jsx
+│  │  │  │  └─ Skeleton.module.scss
+│  │  │  └─ Toast
+│  │  │     ├─ index.js
+│  │  │     ├─ Toast.jsx
+│  │  │     └─ Toast.module.scss
+│  │  ├─ layout
+│  │  │  ├─ Footer
+│  │  │  │  ├─ Footer.jsx
+│  │  │  │  ├─ Footer.module.scss
+│  │  │  │  └─ index.js
+│  │  │  ├─ Header
+│  │  │  │  ├─ Header.jsx
+│  │  │  │  ├─ Header.module.scss
+│  │  │  │  └─ index.js
+│  │  │  └─ Layout
+│  │  │     ├─ index.js
+│  │  │     ├─ Layout.jsx
+│  │  │     └─ Layout.module.scss
+│  │  └─ sections
+│  │     ├─ Comparison
+│  │     │  ├─ Comparison.jsx
+│  │     │  ├─ Comparison.module.scss
+│  │     │  └─ index.js
+│  │     ├─ FAQ
+│  │     │  ├─ FAQ.jsx
+│  │     │  ├─ FAQ.module.scss
+│  │     │  └─ index.js
+│  │     ├─ Features
+│  │     │  ├─ Features.jsx
+│  │     │  ├─ Features.module.scss
+│  │     │  └─ index.js
+│  │     ├─ Pricing
+│  │     │  ├─ index.js
+│  │     │  ├─ Pricing.jsx
+│  │     │  └─ Pricing.module.scss
+│  │     └─ Testimonials
+│  │        ├─ index.js
+│  │        ├─ Testimonials.jsx
+│  │        └─ Testimonials.module.scss
+│  ├─ contexts
+│  │  ├─ ProcessingContext.jsx
+│  │  ├─ ThemeContext.jsx
+│  │  ├─ ToastContext.jsx
+│  │  └─ UserContext.jsx
+│  ├─ hooks
+│  │  ├─ useClipboard.js
+│  │  ├─ useDebounce.js
+│  │  ├─ useImageProcessor.js
+│  │  ├─ useKeyboardShortcuts.js
+│  │  ├─ useLocalStorage.js
+│  │  ├─ useNotifications.js
+│  │  └─ useTheme.js
+│  ├─ lib
+│  │  ├─ axiosConfig.js
+│  │  ├─ constants.js
+│  │  └─ helpers.js
+│  ├─ main.jsx
+│  ├─ pages
+│  │  ├─ Blog
+│  │  │  ├─ Blog.jsx
+│  │  │  ├─ Blog.module.scss
+│  │  │  └─ index.js
+│  │  ├─ Dashboard
+│  │  │  ├─ Dashboard.jsx
+│  │  │  ├─ Dashboard.module.scss
+│  │  │  └─ index.js
+│  │  ├─ Home
+│  │  │  ├─ Home.jsx
+│  │  │  ├─ Home.module.scss
+│  │  │  └─ index.js
+│  │  ├─ Pricing
+│  │  │  ├─ index.js
+│  │  │  ├─ Pricing.jsx
+│  │  │  └─ Pricing.module.scss
+│  │  └─ Privacy
+│  │     ├─ index.js
+│  │     ├─ Privacy.jsx
+│  │     └─ Privacy.module.scss
+│  ├─ services
+│  │  ├─ analytics.js
+│  │  ├─ api.js
+│  │  ├─ backgroundRemover.js
+│  │  ├─ compression.js
+│  │  └─ storage.js
+│  ├─ store
+│  │  ├─ processingStore.js
+│  │  ├─ uiStore.js
+│  │  └─ userStore.js
+│  ├─ styles
+│  │  ├─ animations.scss
+│  │  ├─ globals.scss
+│  │  ├─ mixins.scss
+│  │  └─ variables.scss
+│  ├─ utils
+│  │  ├─ formatters.js
+│  │  ├─ imageUtils.js
+│  │  ├─ seo.js
+│  │  └─ validators.js
+│  └─ workers
+│     └─ imageProcessor.worker.js
+└─ vite.config.js

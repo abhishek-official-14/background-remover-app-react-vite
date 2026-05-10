@@ -77,6 +77,9 @@ const Footer = () => {
               <li>
                 <Link to="/tutorials">Tutorials</Link>
               </li>
+              <li>
+                <Link to="/comparison">Comparison</Link>
+              </li>
             </ul>
           </div>
 
@@ -103,11 +106,11 @@ const Footer = () => {
           <p>
             &copy; {currentYear} AI Background Remover. All rights reserved.
           </p>
-          <div className={styles.legal}>
+          {/* <div className={styles.legal}>
             <Link to="/terms">Terms of Service</Link>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/cookies">Cookie Policy</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
