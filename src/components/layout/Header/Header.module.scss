@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  transition: all 0.3s ease;
+  transition: background-color var(--transition-base) ease, box-shadow var(--transition-base) ease;
   background: transparent;
   
   &.scrolled {
-    background: var(--bg-primary);
+    background: var(--header-overlay);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
   }
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-on-brand);
   font-size: 1rem;
 }
 
@@ -120,7 +120,7 @@
   top: 100%;
   right: 0;
   margin-top: 0.5rem;
-  background: var(--bg-primary);
+  background: var(--header-overlay);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
@@ -149,7 +149,7 @@
 .loginBtn {
   padding: 0.5rem 1.5rem;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  color: var(--text-on-brand);
   border: none;
   border-radius: var(--border-radius-md);
   cursor: pointer;
@@ -182,7 +182,7 @@
     bottom: 0;
     width: 80%;
     max-width: 300px;
-    background: var(--bg-primary);
+    background: var(--header-overlay);
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
