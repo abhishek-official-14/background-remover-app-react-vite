@@ -48,7 +48,7 @@ const Footer = () => {
             <h4 className={styles.subtitle}>Product</h4>
             <ul className={styles.links}>
               <li>
-                <Link to="/features">Features</Link>
+                {/* <Link to="/features">Features</Link> */}
               </li>
               <li>
                 <Link to="/pricing">Pricing</Link>

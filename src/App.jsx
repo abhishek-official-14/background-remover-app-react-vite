@@ -5,6 +5,7 @@ import Layout from "@components/layout/Layout";
 import { useKeyboardShortcuts } from "@hooks/useKeyboardShortcuts";
 import { useAnalytics } from "@services/analytics";
 import LoadingSpinner from "@components/common/Loader";
+// import Features from "./pages/Features";
 
 const Home = lazy(() => import("@pages/Home"));
 const Dashboard = lazy(() => import("@pages/Dashboard"));
@@ -12,6 +13,7 @@ const Pricing = lazy(() => import("@pages/Pricing"));
 const Blog = lazy(() => import("@pages/Blog"));
 const Privacy = lazy(() => import("@pages/Privacy"));
 const Comparison = lazy(() => import("@pages/Comparison"));
+const Features = lazy(() => import("@pages/Features"));
 
 function App() {
   useKeyboardShortcuts();
@@ -32,6 +34,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/comparison" element={<Comparison />} />
+            <Route path="/features" element={<Features />} />
           </Routes>
         </Suspense>
       </Layout>
